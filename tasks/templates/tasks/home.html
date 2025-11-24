@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Daily Activities</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'tasks/style.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h1>My Daily Activities</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="title" placeholder="Add a new activity" required>
+        <button type="submit">Add</button>
+    </form>
+
+    <h2>Activities:</h2>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                {% if task.completed %}
+                    <s>{{ task.title }}</s> ✅
+                    <a class="delete-btn" href="{% url 'delete_task' task.id %}">Delete</a>
+                {% else %}
+                    {{ task.title }}
+                    <a class="complete-btn" href="{% url 'complete_task' task.id %}">Complete</a>
+                {% endif %}
+            </li>
+        {% empty %}
+            <li>No activities yet!</li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
+

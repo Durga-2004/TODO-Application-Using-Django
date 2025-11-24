@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #FFFFE3;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: #DBD4FF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+form button {
+    padding: 10px 15px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #eee;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.complete-btn {
+    color: green;
+}
+
+.delete-btn {
+    color: red;
+}
